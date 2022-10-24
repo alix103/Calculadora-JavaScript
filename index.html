@@ -5,59 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
 </head>
 
-<script>
-
-    let cifra = "";
-    let acumulado=0;
-    let sumar=false;
-    let restar=false;
-    let multiplicar=false;
-
-    function display_numeros(numero){
-        document.getElementById("display").value=cifra+numero;
-        cifra=document.getElementById("display").value;
-    }
-
-    function suma(){
-        acumulado=acumulado+parseInt(cifra);
-        document.getElementById("display").value=acumulado;
-        cifra="";
-        sumar=true;
-    }
-
-    function resultado(){
-        if(sumar){
-            document.getElementById("display").value=acumulado+parseInt(cifra);
-        }else{
-            document.getElementById("display").value=acumulado-parseInt(cifra);
-        }
-    }
-</script>
-
 <body>
-    <input id="display" name="display"></input>
 
-    <button type="button" onclick="display_numeros(1)">1</button>
-    <button type="button" onclick="display_numeros(2)">2</button>
-    <button type="button" onclick="display_numeros(3)">3</button>
+    <div class="container">
+        <div class="calculator">
 
-    <button type="button" onclick="display_numeros(4)">4</button>
-    <button type="button" onclick="display_numeros(5)">5</button>
-    <button type="button" onclick="display_numeros(6)">6</button>
+            <div class="result">0</div>
+            
+            <div class="buttons">
+                <div class="contents">
+                    <div class="elements red large">C</div>
+                    <div class="elements oper"></div>
+                    <div class="elements oper">/</div>
+                    <div class="elements">7</div>
+                    <div class="elements">8</div>
+                    <div class="elements">9</div>
+                    <div class="elements oper">*</div>
+                    <div class="elements">4</div>
+                    <div class="elements">5</div>
+                    <div class="elements">6</div>
+                    <div class="elements oper">-</div>
+                    <div class="elements">1</div>
+                    <div class="elements">2</div>
+                    <div class="elements">3</div>
+                    <div class="elements oper">+</div>
+                    <div class="elements large">0</div>
+                    <div class="elements">.</div>
+                    <div class="elements red">=</div>
+                </div>
+            </div>
+        </div>
 
-    <button type="button" onclick="display_numeros(7)">7</button>
-    <button type="button" onclick="display_numeros(8)">8</button>
-    <button type="button" onclick="display_numeros(9)">9</button>
-    <button type="button" onclick="display_numeros(0)">0</button>
+    </div>
 
-    <button type="button" onclick="suma('+')">+</button>
-    <button type="button" onclick="resta('-')">-</button>
-    <button type="button" onclick="multiplicacion('x')">x</button>
-    <button type="button" onclick="resultado()">=</button>
+    <script src="main.js"></script>
+    
 </body>
-
-
 
 </html>

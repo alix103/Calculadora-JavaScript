@@ -1,0 +1,93 @@
+:root{
+    --font: 'Source Code Pro', monospace;
+    --background: #21cad3;
+    --background-display: #cae6ac;
+    --border-calculator: #4e4e4e;
+    --background-operators: #00a4c6;
+    --background-calculator: #4e4e4e;
+    --background-numbers: #818181;
+    --hover-elements: #686868;
+    --backdround-result-delete: #ff5353;
+    --color: #ffffff;
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    font-family: var(--font);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;   
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 2px solid var(--border-calculator);
+}
+
+.result{
+    padding: 25px 15px;
+    width: 100%;
+    text-align: right;
+    border: 2px solid var(--border-calculator);
+    overflow-x: auto;
+    background-color: var(--background-display);
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    color: var(--color);
+}
+
+.contents{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.elements{
+    width: 25%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--background-numbers);
+    border: 2px solid var(--border-calculator);
+}
+
+.elements:hover{
+    background-color: var(--hover-elements);
+}
+
+.elements.oper{
+    background-color: var(--background-operators);
+}
+
+.elements.oper:hover{
+    background-color: rgb(39, 141, 172);
+}
+
+.elements.red{
+    background-color: var(--backdround-result-delete);
+}
+
+.elements.red:hover{
+    background-color: rgb(164, 37, 37);
+}
+
+.elements.large{
+    width: 50%;
+}
