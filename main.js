@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=> {
+window.addEventListener('load', ()=> { 
     const display = document.querySelector('.result');
     const buttons = document.getElementsByClassName('elements')
 
